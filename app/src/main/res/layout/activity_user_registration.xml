@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.aman_mehrat.letsdenote.UserRegistration">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/hye" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Started"
+                android:layout_gravity="center"
+                android:textSize="26dp"
+                />
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/name"
+                android:drawablePadding="5dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/et_password"
+                 android:layout_width="match_parent"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="5dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/rounded_white"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:drawableLeft="@drawable/phonenumber"
+                android:drawablePadding="5dp"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_white"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="5dp"
+                android:paddingStart="10dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the Terms And Conditions"
+                android:textSize="11sp"
+                android:paddingLeft="5dp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_join"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text="JOIN NOW"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ALREADY HAVE AN ACCOUNT"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal|bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
