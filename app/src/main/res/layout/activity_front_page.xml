@@ -21,14 +21,4 @@
         android:orientation="horizontal">
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_marginBottom="18dp"
-        android:layout_marginRight="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:src="@drawable/add"
-        android:layout_height="wrap_content"
-        android:id="@+id/fab" />
-
 </RelativeLayout>

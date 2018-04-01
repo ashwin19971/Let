@@ -32,7 +32,8 @@
         <activity
             android:name=".UserRegistration"
             android:theme="@style/AppTheme" />
-        <activity android:name=".NavDrawerActivityMain"
+        <activity
+            android:name=".NavDrawerActivityMain"
             android:theme="@style/AppTheme">
         </activity>
     </application>
