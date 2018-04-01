@@ -2,20 +2,18 @@ package com.example.ashwingiri.donate;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+
 
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,10 +30,10 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        vp = (ViewPager) findViewById(R.id.view_pager);
-        Layout_bars = (LinearLayout) findViewById(R.id.layoutDots);
-        btnSkip = (Button) findViewById(R.id.btnSkip);
-        btnNext = (Button) findViewById(R.id.btnNext);
+        vp = findViewById(R.id.view_pager);
+        Layout_bars = findViewById(R.id.layoutDots);
+        btnSkip = findViewById(R.id.btnSkip);
+        btnNext = findViewById(R.id.btnNext);
         btnSkip.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         myvpAdapter = new MyViewPagerAdapter();
@@ -56,8 +54,6 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void ColoredBars(int thisScreen) {
-//        int[] colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
-//        int[] colorsActive = getResources().getIntArray(R.array.array_dot_active);
         bottomBars = new ImageView[screens.length];
 
         Layout_bars.removeAllViews();
@@ -71,9 +67,6 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (bottomBars.length > 0){
             bottomBars[thisScreen].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.selected_item_dot));
-//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//            params.setMargins(8, 0, 8, 0);
-//            Layout_bars.addView(bottomBars[thisScreen],params);
         }
     }
 
@@ -97,7 +90,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 btnNext.setText("Let's Started");
                 btnSkip.setVisibility(View.GONE);
             } else {
-                btnNext.setText("Next>>");
+                btnNext.setText("Next");
                 btnSkip.setVisibility(View.VISIBLE);
             }
         }
@@ -160,39 +153,3 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 }
-
-//    public class MyViewPagerAdapter extends PagerAdapter {
-//        private LayoutInflater inflater;
-//
-//        public MyViewPagerAdapter() {
-//        }
-//
-//        @Override
-//        public Object instantiateItem(ViewGroup container, int position) {
-//            inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//            View view = inflater.inflate(screens[position], container, false);
-//            container.addView(view);
-//            return view;
-//        }
-//
-//        @Override
-//        public int getCount() {
-//            return screens.length;
-//        }
-//
-//        @Override
-//        public void destroyItem(ViewGroup container, int position, Object object) {
-//            View v = (View) object;
-//            container.removeView(v);
-//        }
-//
-//        @Override
-//        public boolean isViewFromObject(View v, Object object) {
-//            return v == object;
-//        }
-//    }
-
-
-
-
-

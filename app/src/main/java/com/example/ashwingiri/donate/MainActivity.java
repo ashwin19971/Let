@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void click4(View v) {
-        Intent n = new Intent(this, FrontPage.class);
+        Intent n = new Intent(this, NavDrawerActivityMain.class);
 
         startActivity(n);
 
